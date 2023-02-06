@@ -2,6 +2,7 @@
 
 .MyOrder {
 	width: 360px;
+	height: calc(100vh - 65px);
 	padding: 24px;
 	box-sizing: border-box;
 	position: absolute;
@@ -11,6 +12,16 @@
 	bottom: auto;
 	border-radius: 6px;
 	border: 1px solid var(--very-light-pink);
+	overflow-y: scroll;
+	animation: swipeLeft .40s;
+}
+@keyframes swipeLeft {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 360px;
+	}
 }
 .title-container {
 	display: flex;
