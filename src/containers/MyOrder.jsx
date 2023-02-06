@@ -24,15 +24,17 @@ const MyOrder = () => {
 				{state.cart.map(product => (
 					<OrderItem product={product} key={`orderItem-${product.id}`} />
 				))}
+			</div>
+			<div>
 				<div className="order">
-					<p>
-						<span>Total</span>
-					</p>
-					<p>${sumTotal()}</p>
-				</div>
-				<button className="primary-button">
-					Checkout
-				</button>
+						<p>
+							<span>Total</span>
+						</p>
+						<p>${sumTotal()}</p>
+					</div>
+					<button className="primary-button">
+						Checkout
+					</button>
 			</div>
 		</aside>
 	);

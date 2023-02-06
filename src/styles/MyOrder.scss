@@ -2,7 +2,7 @@
 
 .MyOrder {
 	width: 360px;
-	height: calc(100vh - 65px);
+	max-height: calc(100vh - 65px);
 	padding: 24px;
 	box-sizing: border-box;
 	position: absolute;
@@ -12,8 +12,9 @@
 	bottom: auto;
 	border-radius: 6px;
 	border: 1px solid var(--very-light-pink);
-	overflow-y: scroll;
 	animation: swipeLeft .40s;
+	display: flex;
+	flex-direction: column;
 }
 @keyframes swipeLeft {
 	0% {
@@ -22,6 +23,26 @@
 	100% {
 		width: 360px;
 	}
+}
+.my-order-content {
+	height: auto;
+	overflow-y: scroll;
+}
+/* width */
+.my-order-content::-webkit-scrollbar {
+	width: 5px;
+}
+/* Track */
+.my-order-content::-webkit-scrollbar-track {
+	background: var(--white);
+}
+/* Handle */
+.my-order-content::-webkit-scrollbar-thumb {
+	background: #9dd8a5;
+}
+/* Handle on hover */
+.my-order-content::-webkit-scrollbar-thumb:hover {
+	background: #69b974;
 }
 .title-container {
 	display: flex;
