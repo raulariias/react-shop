@@ -21,7 +21,6 @@ const useInitialState = () => {
         });
     }
 
-
     return {
         state,
         addToCart,
