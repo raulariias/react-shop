@@ -9,6 +9,7 @@ nav {
 	top: 0;
 	background-color: var(--white);
 	width: calc(100% - 50px);
+	z-index: 1000;
 }
 .menu {
 	display: none;

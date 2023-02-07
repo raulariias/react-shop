@@ -1,6 +1,7 @@
 @use './vars';
 
 .MyOrder {
+	z-index: 999;
 	width: 360px;
 	max-height: calc(100vh - 65px);
 	padding: 24px;
