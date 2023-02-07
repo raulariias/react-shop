@@ -24,7 +24,7 @@ const useInitialState = () => {
     return {
         state,
         addToCart,
-        removeFromCart
+        removeFromCart,
     }
 }
 

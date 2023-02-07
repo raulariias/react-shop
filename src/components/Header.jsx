@@ -10,7 +10,7 @@ import shoppingCart from "@icons/icon_shopping_cart.svg"
 const Header = () => {
     const [toggle, setToggle] = useState(false);
     const [toggleOrders, setToggleOrders] = useState(false);
-    const { state: {cart}} = useContext(AppContext);
+    const { state: {cart} } = useContext(AppContext);
 
     const handleToggle = () => {
         setToggle(!toggle);
@@ -45,7 +45,7 @@ const Header = () => {
             <div className="navbar-right">
                 <ul>
                     <li className="navbar-email" onClick={handleToggle} >
-                        platzi@example.com
+                        rauljariasz@example.com
                     </li>
                     <li 
                         className="navbar-shopping-cart" 
@@ -57,7 +57,7 @@ const Header = () => {
                 </ul>
             </div>
             {toggle ? <Menu /> : ""}
-            {toggleOrders && <MyOrder />}
+            {toggleOrders && <MyOrder toggleOrders={toggleOrders} setToggleOrders={setToggleOrders}/>}
         </nav>
     );
 };

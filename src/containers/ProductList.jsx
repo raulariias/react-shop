@@ -1,4 +1,3 @@
-import axios from 'axios'
 import ProductItem from '@components/ProductItem';
 import useGetProducts from '@hooks/useGetProducts';
 import '@styles/ProductList.scss';

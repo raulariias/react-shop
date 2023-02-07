@@ -5,7 +5,7 @@ import '../styles/MyOrder.scss';
 
 import moArrow from "@icons/flechita.svg"
 
-const MyOrder = () => {
+const MyOrder = ({toggleOrders, setToggleOrders}) => {
 	const { state } = useContext(AppContext)
 
 	const sumTotal = () => {
@@ -17,7 +17,12 @@ const MyOrder = () => {
 	return (
 		<aside className="MyOrder">
 			<div className="title-container">
-				<img src={moArrow} alt="arrow" />
+				<img 
+					src={moArrow} 
+					alt="arrow" 
+					onClick={() => setToggleOrders(!toggleOrders)}
+					className="CloseOrders"
+				/>
 				<p className="title">My order</p>
 			</div>
 			<div className="my-order-content">
